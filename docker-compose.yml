@@ -1,0 +1,12 @@
+services:
+  scrapper-placa:
+    build: .
+    container_name: scrapper-placa
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file: .env
+    # Chrome usa /dev/shm; el default de 64 MB lo revienta
+    shm_size: 1gb
+    volumes:
+      - ./cache:/app/cache

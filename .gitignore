@@ -1,0 +1,7 @@
+node_modules/
+.env
+cache/
+debug/
+
+# Material local, no parte del proyecto
+LINKEDIN.md
